@@ -5,7 +5,8 @@
  */
 int main(void)
 {
-  int ch 
-  int putc()
+  int ch;
+  ch = "Programming is like building a multilingual puzzle\n";
+  int puts(ch);
   return (0);
 }
