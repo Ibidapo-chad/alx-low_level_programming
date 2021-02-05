@@ -4,12 +4,14 @@
 int main(void)
 {
   int ch;
-  /* print lowercase letters*/
-  ch = 'a';
-  while (ch <= 'z')
+  /* print single digits of base 10*/
+  ch = 0;
+  while (ch < 10)
   {
+    /* Declare putchar */
     putchar(ch);
     putchar('\n');
+    ch++;
   }
   return (0);
 }

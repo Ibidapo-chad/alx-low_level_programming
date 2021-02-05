@@ -8,9 +8,13 @@ int main(void)
   ch = 'a';
   while (ch <= 'z')
   {
+    if ((ch == 'e') || (ch == 'q'))
+    {
+      continue;
+    }
     putchar(ch);
     putchar('\n');
+    ch++;
   }
-  ch++;
   return (0);
 }

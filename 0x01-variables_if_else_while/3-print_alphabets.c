@@ -8,13 +8,22 @@ int main(void)
   /* print lowercase and uppercase letters*/
   lch ='a';
   uch ='A';
-  while (lch <= 'z' && uch <= 'Z')
+  if (lch <= 'z')
   {
-    putchar(lch);
-    putchar(uch);
-    putchar('\n');
+    while (lch <= 'z')
+    { 
+      /* Declaring function putchar */
+      putchar(lch);
+      lch++;
+    }
   }
-  lch++;
-  uch++;
+  else
+  {
+    while (uch <= 'Z')
+    { 
+      putchar(uch);
+      uch++;
+    }
+  }
   return (0);
 }

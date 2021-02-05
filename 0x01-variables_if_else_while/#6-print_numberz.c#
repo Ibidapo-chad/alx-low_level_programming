@@ -1,0 +1,18 @@
+0;276;0c#include <stdio.h>
+
+/* betty style doc for function main goes there */
+int cdcd(void)
+{
+  int ch;
+  /* print single digits of base 10*/
+  ch = 0;
+  while (ch < 10)
+  {
+    /* Declare putchar */
+    int putchar;
+    putchar(ch);
+    putchar('\n');
+    ch++;
+  }
+  return (0);
+}

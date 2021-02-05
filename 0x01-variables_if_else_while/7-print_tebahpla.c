@@ -4,12 +4,13 @@
 int main(void)
 {
   int ch;
-  /* print lowercase letters*/
-  ch = 'a';
+  /* print lowercase letters in reverse */
+  ch = 'z';
   while (ch <= 'z')
   {
     putchar(ch);
     putchar('\n');
+    ch--;
   }
   return (0);
 }
