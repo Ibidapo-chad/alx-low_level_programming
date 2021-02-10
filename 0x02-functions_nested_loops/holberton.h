@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -23,7 +24,7 @@ void print_alphabet(void)
     ch++;
   }
   _putchar('\n');
-  return (0);
+  return;
 }
 
 /* print the alphabet 10 times */
@@ -42,7 +43,7 @@ void print_alphabet_x10(void)
     _putchar('\n');
     i++;
   }
-  return (0);
+  return;
 }
 
 /* checks for lowercase characters */
@@ -68,12 +69,12 @@ int _isalpha(int c)
 /* prints the sign of a number */
 int print_sign(int n)
 {
-  if (n > 0)
+  if ((n > 0))
   {
     _putchar('+');
     return (1);
   }
-  else if (n = 0)
+  else if ((n = 0))
   {
     _putchar('0');
     return (0);
@@ -104,7 +105,63 @@ int _abs(int num)
 /* prints last digit of a number */
 int print_last_digit(int n)
 {
-  int n, ld;
+  int ld;
   ld = n % 10;
   return (ld);
+}
+
+/* 9 times table */
+void times_table(void)
+{
+  int n, m;
+  n = 0;
+  while (n <= 9)
+  {
+    m = 0;
+    while (m <= 9)
+    {
+      int mult;
+      mult = (n * m);
+      _putchar(mult);
+      m++;
+    }
+    _putchar(n);   
+    n++;
+    _putchar('\n');
+  }
+    return;
+}
+
+/* adding integers */
+int add(int a, int b)
+{
+  int sum;
+  sum = a + b;
+  return (sum);
+} 
+
+/* print natural numbers */
+void print_to_98(int n)
+{
+  if (n <= 98)
+  {
+    while (n <= 98)
+    {
+      printf("%d", n);
+      putchar(',');
+      putchar(' ');
+      n++;
+    }
+  }
+  else 
+  {
+    while (n >= 98)
+    {
+      printf("%d", n);
+      putchar(',');
+      putchar(' ');
+      n++;
+    }
+  }
+  return;
 }

@@ -2,8 +2,6 @@
 
 int main(void)
 {
-  int r;
-  r = _islower('H');
-  _putchar(r);
+  print_to_98(0);
   return (0);
 }

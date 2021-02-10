@@ -2,7 +2,9 @@
 
 int main(void)
 {
-  int c;
-  _isalpha();
+  int c, r;
+  c = 'H';
+  r = _isalpha(c);
+  _putchar(r);
   return (0);
 }

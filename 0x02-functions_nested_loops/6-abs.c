@@ -1,7 +1,9 @@
-#include "holberton.c"
+#include "holberton.h"
 
 int main(void)
 {
-  _abs();
+  int r;
+  r = _abs(-98);
+  _putchar(r);
   return (0);
 }
