@@ -165,3 +165,142 @@ void print_to_98(int n)
   }
   return;
 }
+
+/* more functions */
+int _isupper(int c)
+{
+  c = 'A';
+  while (c <= 'Z')
+  {
+    if (c <= 'Z')
+      return (1);
+    else
+      return (0);
+    c++;
+  }
+}
+
+int _isdigit(int c)
+{
+  c = 0;
+  while (c <= 9)
+  {
+    if (c <= 9)
+      return (1);
+    else 
+      return (0);
+    c++;
+  }
+}
+
+int mul(int a, int b)
+{
+  int res;
+  res = a * b;
+  return (res);
+}
+
+void print_numbers(void)
+{
+  int j;
+  j = 0;
+  while (j <= 9)
+  {
+    _putchar(j);
+    j++;
+  }
+  _putchar('\n');
+  return;
+}
+
+void print_most_numbers(void)
+{
+  int j = 0;
+  while (j <= 9)
+  {
+    if (j == 2 || j == 4)
+      continue;
+    else
+      _putchar(j);
+    j++;
+    _putchar('\n');
+  }
+  return;
+}
+
+/* more numbers */
+void more_numbers(void)
+{
+  int i, j;
+  i = 0;
+  while (i <= 14)
+  {
+    while (j <= 14)
+    {
+      _putchar(j);
+      j++;
+    }
+    i++;
+    _putchar('\n');
+  }
+  return;
+}
+
+/* 06 Draw a straight line */
+void print_line(int n)
+{
+  if (n <= 0)
+    _putchar('\n');
+  else
+  {
+    int j = 1;
+    while (j <= n)
+    {
+      _putchar('_');
+      j++;
+    }
+  }
+  return;
+}
+
+/* 07 Draw a diagonal line */
+void print_diagonal(int n)
+{
+  int i, j;
+  for (i = 1; i <= n; i++)
+  {
+    for (j = 1; j <= n; j++)
+    {
+      if (n <= 0)
+	_putchar('\n');
+      else if (i == j)
+    	_putchar('\\');
+      else
+	_putchar(" ");
+    }
+  }
+}
+
+/* 08 Print a square */
+void print_square(int size)
+{
+  if (size <= 0)
+    _putchar('\n');
+  else
+  {
+    int i;
+    for (i = 1; i <= size; i++)
+    {
+      int j;
+      for (j = 1; j <= size; j++)
+      {
+	_putchar('#');
+      }
+      _putchar('#');
+    }
+  }
+}
+
+/* 09 Fizz-Buzz */
+
+
