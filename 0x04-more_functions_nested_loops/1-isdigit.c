@@ -1,9 +1,9 @@
-#include "holberton"
+#include "holberton.h"
 
 int main(void)
 {
   int c;
   c = 40;
-  _putchar(_isdigit());
+  _putchar(_isdigit(c));
   return (0);
 }

@@ -178,6 +178,7 @@ int _isupper(int c)
       return (0);
     c++;
   }
+  return 0;
 }
 
 int _isdigit(int c)
@@ -191,6 +192,7 @@ int _isdigit(int c)
       return (0);
     c++;
   }
+  return 0;
 }
 
 int mul(int a, int b)
@@ -273,7 +275,7 @@ void print_diagonal(int n)
       else if (i == j)
     	_putchar('\\');
       else
-	_putchar(" ");
+	_putchar(' ');
     }
   }
 }
