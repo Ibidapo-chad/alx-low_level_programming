@@ -1,20 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 
-/**
- * main 
- *
- * Return: Always 0.
- */
-int main(void)
+void reset_to_98(int *n)
 {
-  int n, *k;
-
-  n = 402;
-  printf("n=%d\n", n);
-  k = &n;
-  *k = 98;
-  reset_to_98(&n);
-  _putchar('n');
-  return (0);
+  /* implicitly sets an integer to n */
+  *n = 100;
 }
