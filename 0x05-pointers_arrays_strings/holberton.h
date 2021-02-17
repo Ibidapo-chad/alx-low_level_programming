@@ -301,5 +301,91 @@ void print_square(int size)
 }
 
 /* Passing a pointer as an argument */
+/* Reset variable to an assigned integer */
+void reset_to_98(int *n)
+{
+  /* implicitly sets an integer to n */
+  *n = 100; 
+}
 
+/* swap arguments or parameters of FX swap */
+void swap_int(int *a, int *b)
+{
+  int sw;
+  sw = *a;
+  *a = *b;
+  *b = sw;
+}
 
+/* Gives the length of a string */
+int _strlen(char *s)
+{
+  char *p = s;
+  while (*p != '\0')
+    p++;
+  return p - s;
+}
+
+/* prints a string to stdout */
+void _puts(char *str)
+{
+  int i;
+  for (i = 0; *str != '\0'; i++)
+    _putchar(str[i]);
+  _putchar('\n');
+}
+
+/* prints strings in reverse */
+void print_rev(char *s)
+{
+  int i, n;
+  n = _strlen(s);
+  for (i = n; *s != '\0'; i--)
+    _putchar(s[i]);
+  _putchar('\n');
+}
+
+/* reverses string */
+void rev_string(char *s)
+{
+  int i, n;
+  n = _strlen(s);
+  for (i = n; *s != '\0'; i--)
+    _putchar(s[i]);
+}
+
+/* prints every other character of a string */
+void puts2(char *str)
+{
+  int i;
+  
+  for (i = 0; str[i] != '\0'; i += 2)
+  {
+    if ((i % 2) == 0)
+      _putchar(str[i]);
+  }
+  _putchar('\n');
+}
+
+/* prints elements of an array */
+void print_array(int *a, int n)
+{
+  int i;
+  for (i = 0; i < n; i++)
+  {
+    _putchar(a[i]);
+    _putchar(',');
+    _putchar(' ');
+  }
+  _putchar('\n');
+}
+
+/* copies pointed to string */
+char *_strcpy(char *dest, char *src)
+{
+    while ((*dest = *src) != '\0')
+    {  dest++;
+       src++;
+    }
+    return 0;
+}

@@ -8,11 +8,16 @@
  */
 int main(void)
 {
-  char *str;
-  int len;
+  int a;
+  int b;
 
-  str = "Holberton!";
-  len = _strlen(str);
-  _putchar(len);
+  a = 98;
+  b = 42;
+  _putchar('a
+  _putchar(',');
+  _putchar(' ');
+  _putchar('b');
+  swap_int(&a, &b);
+  _putchar('a' + ',' + ' ' + 'b');
   return (0);
 }
