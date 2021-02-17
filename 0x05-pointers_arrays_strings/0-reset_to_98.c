@@ -4,5 +4,5 @@
 void reset_to_98(int *n)
 {
   /* implicitly sets an integer to n */
-  *n = 100;
+  *n = 98;
 }

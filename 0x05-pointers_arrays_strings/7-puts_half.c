@@ -1,15 +1,26 @@
 #include "holberton.h"
+#include <stdio.h>
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+/** function puts_half
+ *  splits the array in the middle and prints
  */
-int main(void)
+void puts_half(char *str)
 {
-  char *str;
-
-  str = "0123456789";
-  puts_half(str);
-  return (0);
+  /** Declaring variables for string length,
+   *  in sl, median(md) and index(i)
+   */
+  int i, md, sl;
+  sl = _strlen(str);
+  if (sl % 2 == 0)
+  {
+    md = sl / 2;
+    for (i = md; i < (sl - 1) && *(str + i) != '\0'; i++)
+      _putchar(str[i]);
+  }
+  else
+  {
+    md = (sl - 1) / 2;
+    for (i = md; i < (sl - 1) && *(str + i) != '\0'; i++)
+      _putchar(str[i]);
+  }
 }
