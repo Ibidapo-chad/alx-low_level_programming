@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/* Gives the length of a string */
+int _strlen(char *s);
+
 int _putchar(char c);
 
 /* concatenation of two strings with null termination */
