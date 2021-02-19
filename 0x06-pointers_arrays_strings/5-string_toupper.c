@@ -13,7 +13,8 @@ char *string_toupper(char *)
   {
     if (*(p + i) >= 97 || *(p + i) <= 122)
       *(p + i) = *(p + i) + 32;
+      return *(p + i);
     _putchar(*(p + i));
   }
-  return 0;
+  return *(p + i);
 }
