@@ -1,0 +1,5 @@
+#include "holberton.h"
+
+/**
+ *  program prints all arguments it receives
+ */
