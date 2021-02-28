@@ -23,15 +23,15 @@ int main(int argc, char *argv[])
 		{
 			if (!*(argv + i))
 			{
-				_putchar('E' + 'r' + 'r' + 'o' + 'r');
-				_putchar('\n');
+				printf("Error");
+				printf("\n");
 				return (1);
 			}
 			else
 			{
 				mul = argv[1] * argv[2];
-				_putchar(mul);
-				_putchar('\n');
+				printf("%d", mul);
+				printf("\n");
 			}
 		}
 	}
