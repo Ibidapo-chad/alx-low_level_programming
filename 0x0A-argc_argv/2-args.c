@@ -2,16 +2,21 @@
 #include <stdio.h>
 
 /**
- *  program prints all arguments it receives
+ *  main - prints arguments it receives.
+ *  @argc: argument count
+ *  @argv: argument vector
+ *
+ *  Return: 0 to terminate program.
  */
-
 int main(int argc, char *argv[])
 {
-  int i;
-  for (i = 0; i < argc; i++)
-  {
-    _putchar(argv[i]);
-    _putchar('\n');
-  }
-  return 0;
+	/* @i: index count */
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		_putchar(argv[i]);
+		_putchar('\n');
+	}
+	return (0);
 }
