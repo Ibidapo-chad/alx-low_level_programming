@@ -1,5 +1,0 @@
-#include "holberton.h"
-
-/**
- *  program prints number of arguments passed
- */

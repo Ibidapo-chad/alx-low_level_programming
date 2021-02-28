@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  *  program multiplies two numbers
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
     {
       if (!*(argv + i))
       {
-	_putchar("Error");
+	_putchar('E' + 'r' + 'r' + 'o' + 'r');
 	_putchar('\n');
 	return 1;
       }
