@@ -15,30 +15,33 @@ int main(int argc, char *argv[])
 	 *  @add: adds arguments
 	 *  @i: index count
 	 */
-	int add, i;
+	int i;
+	int add;
+	char a, b, c;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
+			a = printf("%s", *(argv + i));
 			if (!*(argv + i))
 			{
 				printf("0");
 				printf("\n");
 			}
-			else if (argv[i] < '0' || argv[i] > '9')
+			else if (a < '0' || a > '9')
 			{
 				printf("Error");
 				printf("\n");
 				return (1);
 			}
 			else
-			{
-				add = argv[1] + argv[2];
-				printf("%d", add);
-				return (0);
-			}
+				printf("%s\n", *(argv + i));
 		}
+		b = printf("%s", *(argv + 1));
+		c = printf("%s", *(argv + 2));
+		add = b + c;
+		printf("%d", add);
 	}
 	return (0);
 }

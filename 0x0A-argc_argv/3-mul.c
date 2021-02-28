@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
 	 *  @i: index count
 	 *  @mul: multiplies argument
 	 */
-	int i, mul;
+	int i;
+	int mul;
+	char a, b;
 
 	if (argc > 1)
 	{
@@ -29,7 +31,9 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				mul = argv[1] * argv[2];
+				a = printf("%s", argv[1]);
+				b = printf("%s", argv[2]);
+				mul = a * b;
 				printf("%d", mul);
 				printf("\n");
 			}
