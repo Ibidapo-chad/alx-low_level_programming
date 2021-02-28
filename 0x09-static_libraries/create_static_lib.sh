@@ -1,4 +1,6 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -c *.c | echo -e "\n"
+gcc -Wall -Werror -Wextra -pedantic -c *.c 
+
 ar -rc liball.a *.o
-ranlib liball.a | echo -e "\n"
+
+ranlib liball.a 
