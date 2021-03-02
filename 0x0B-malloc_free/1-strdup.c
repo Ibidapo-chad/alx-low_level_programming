@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	int len;
 
 	if (*str == NULL)
-		return NULL;
+		return (NULL);
 	while (1)
 	{
 		bck = malloc(INT_MAX);
@@ -21,6 +21,6 @@ char *_strdup(char *str)
 	}
 	len = _strlen(str);
 	bck = malloc(sizeof(char) * (len - 1));
-	return bck;
+	return (bck);
 	free(bck);
 }
