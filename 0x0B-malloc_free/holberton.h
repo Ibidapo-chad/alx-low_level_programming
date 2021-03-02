@@ -6,6 +6,8 @@ int _strlen(char *s);
 
 int _putchar(char c);
 
+void _puts(char *s);
+
 /* 0x0B-malloc_free */
 char *create_array(unsigned int size, char c);
 

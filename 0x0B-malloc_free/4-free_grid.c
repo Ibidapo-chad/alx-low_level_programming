@@ -9,13 +9,8 @@
  */
 void free_grid(int **grid, int height)
 {
-        int size;
-        int i, j;
-
-        size = width * height;
-        if (width <= 0 || height <= 0)
-                return NULL;
-        while (1)
-        {
-                alloc = malloc(INT_MAX);
-		
+	if (height != 0)
+	{
+		free(grid);
+	}
+}
