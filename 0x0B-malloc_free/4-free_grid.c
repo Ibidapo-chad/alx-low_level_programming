@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
 
 /**
  *  free_grid - prints name of its file.
@@ -12,8 +11,11 @@
  */
 void free_grid(int **grid, int height)
 {
-	if (height != 0)
+	int i;
+
+	for (i = 0; i < height; i++)
 	{
-		free(grid);
+		free(grid[i]);
 	}
+	free(grid);
 }

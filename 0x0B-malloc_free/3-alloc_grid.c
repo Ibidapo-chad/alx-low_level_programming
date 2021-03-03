@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
 
 
 /**
@@ -13,28 +12,38 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int size;
+	int k, m;
 	int i, j;
 	int **alloc;
 
-	size = width * height;
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	while (1)
+	else
 	{
-		alloc = malloc(INT_MAX);
-		if (alloc == NULL)
-			return (NULL);
-	}
-	for (i = 0; i < (size - 1); i++)
-	{
-		alloc[i][j] = 0;
-		for (j = 0; j < (size - 1); j++)
+		alloc = (int **)malloc(sizeof(int *) * height);
+		if (!alloc)
 		{
-			alloc[i][j] = 0;
-			_putchar(alloc[i][j]);
+			free(alloc);
+			return (NULL);
 		}
-		_putchar(alloc[i][j]);
+		for (i = 0; i < height; i++)
+		{
+			alloc[i] = (int *)malloc(width * sizeof(int));
+			if (!alloc[i])
+			{
+				for (j = 0; j <= i; j++)
+					free(alloc[j]);
+				free(alloc);
+				return (NULL);
+			}
+		}
+		for (k =0; k < height; k++)
+		{
+			for (m = 0; m < width; m++)
+			{
+				alloc[k][m] = 0;
+			}
+		}
+		return (alloc);
 	}
-	return (alloc);
 }
