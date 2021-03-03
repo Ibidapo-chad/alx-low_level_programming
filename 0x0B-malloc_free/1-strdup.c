@@ -10,19 +10,19 @@
  */
 char *_strdup(char *str)
 {
-	char *bck;
-	unsigned int i, len;
+	char *s;
+	int index, length;
 
-	len = 0;
-	if (str == NULL)
-		return (NULL);
-	for (i = 0; str[i]; i++)
-		len++;
-	bck = (char *)mallock(sizeof(char) * (len + 1));
-	if (bck == NULL)
-		return (NULL);
-	for (i = 0; str[i]; i++)
-		bck[i] = str[i];
-	bck[len] = '\0';
-	return (bck);
+	if (str == 0)
+		return (0);
+	length = 0;
+	while (*(str + length))
+		length++;
+	s = (char *)malloc(sizeof(char) * (length + 1));
+	if (s == 0)
+		return (0);
+	for (index = 0; index < length; index++)
+		*(s + index) = *(str + index);
+	*(s + index) = '\0';
+	return (s);
 }
