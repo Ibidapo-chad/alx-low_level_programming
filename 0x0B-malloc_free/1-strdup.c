@@ -1,10 +1,9 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
 
 /**
- *  main - prints name of its file.
+ *  _strdup - prints name of its file.
  *  @str: argument string
  *
  *  Return: NULL or pointer
@@ -12,14 +11,14 @@
 char *_strdup(char *str)
 {
 	char *bck;
-	int i, len;
+	unsigned int i, len;
 
 	len = 0;
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; str[i]; i++)
-		len;
-	bck = mallock(sizeof(char*) * (len + 1));
+		len++;
+	bck = (char *)mallock(sizeof(char) * (len + 1));
 	if (bck == NULL)
 		return (NULL);
 	for (i = 0; str[i]; i++)
