@@ -1,4 +1,8 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
+
 
 /**
  *  create_array - prints name of its file.
@@ -21,4 +25,5 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 		return (NULL);
+	return (arr);
 }

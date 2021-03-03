@@ -1,4 +1,8 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
+
 
 /**
  *  alloc_grid - prints name of its file.
@@ -24,13 +28,13 @@ int **alloc_grid(int width, int height)
 	}
 	for (i = 0; i < (size - 1); i++)
 	{
-		alloc[i][j] == 0;
+		alloc[i][j] = 0;
 		for (j = 0; j < (size - 1); j++)
 		{
-			alloc[i][j] == 0;
-			_putchar(alloc[i][j];
+			alloc[i][j] = 0;
+			_putchar(alloc[i][j]);
 		}
-		_putchar(alloc[i][j];
+		_putchar(alloc[i][j]);
 	}
 	return (alloc);
 }

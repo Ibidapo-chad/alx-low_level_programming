@@ -1,4 +1,8 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
+
 
 /**
  *  free_grid - prints name of its file.
@@ -9,13 +13,20 @@
  */
 char *argstostr(int ac, char **av)
 {
-	if (ac == 0 || av == NULL)
+	int i;
+	char **arg;
+	char *s;
+
+	arg = av;
+	arg = malloc(sizeof(char) * ac);
+	if (ac == 0 || arg == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		_puts(*(av + i));
+		_puts(arg[i]);
 	}
-	return (av);
+	;
+	return (s);
 }
 
 /**
@@ -28,15 +39,16 @@ void _puts(char *s)
 {
 	int i;
 
-	if (*s)
-	{
-		for (i = 0; ; i++)
+		if (*s)
 		{
-			if (_putchar(s[i]) == '\0')
-				break;
-			if (_putchar(s[i]) == ' ')
-				return ('\n');
-			_putchar(s[i]);
+			for (i = 0; ; i++)
+			{
+				if (_putchar(s[i]) == '\0')
+					break;
+				if (_putchar(s[i]) == ' ')
+					_putchar('\n');
+				_putchar(s[i]);
+			}
 		}
-	}
+
 }

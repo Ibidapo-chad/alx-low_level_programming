@@ -1,4 +1,7 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
 
 /**
  *  main - prints name of its file.
@@ -11,7 +14,7 @@ char *_strdup(char *str)
 	char *bck = str;
 	int len;
 
-	if (*str == NULL)
+	if (*str == '\0')
 		return (NULL);
 	while (1)
 	{
