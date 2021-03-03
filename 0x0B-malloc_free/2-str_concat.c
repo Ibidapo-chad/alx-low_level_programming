@@ -1,10 +1,9 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
 
 /**
- *  str_concat - prints name of its file.
+ *  str_concat - concatenates two strings.
  *  @s1: argument string 1
  *  @s2: argument string 2
  *
@@ -12,21 +11,25 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j;
-	int h;
-	char *result;
+	int i, j, k, m;
+	char *s;
+	/* total length of variables k, m and 1 */
+	int len;
 
-	h = _strlen(s1) + _strlen(s2) + 1;
-	result = malloc(h * sizeof(char));
-	for(i = 0; i < _strlen(s1); i++)
-	{
-		result[i] = s1[i];
-	}
-
-	for(j = i; j < _strlen(s2) + _strlen(s1); j++)
-	{
-		result[j] = s2[j];
-	}
-	result[h - 1] = '\0';
-	return (result);
+	if (s1 == NULL)
+		return("");
+	if (s2 == NULL)
+		return ("");
+	for (k = 0; s1[k] != '\0'; k++)
+		k++;
+	for (m = 0; s2[m] != '\0'; m++)
+		m++;
+	len = k + m + 1;
+	s = malloc(sizeof(char) * len);
+	for (i = 0; s1[i] < len; i++)
+		s[i] = s1[i];
+	for (j = 0; s2[j] < len; j++)
+		s[i + k] = s2[j];
+	s[len] = '\0';
+	return (s);
 }
