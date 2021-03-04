@@ -10,7 +10,7 @@
  *
  *  Return: a char pointer
  */
-char *string_nconcat(char *s1, char s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j;
 	char *cat;
@@ -20,8 +20,8 @@ char *string_nconcat(char *s1, char s2, unsigned int n)
 		return ("");
 	else
 	{
-		s1_len++ = 0;
-		s2_len++ = 0;
+		s1_len = 0;
+		s2_len = 0;
 		for (i = 0; s1[i] != '\0'; i++)
 			s1_len++;
 		for (j = 0; s2[j] != '\0'; j++)
@@ -40,6 +40,7 @@ char *string_nconcat(char *s1, char s2, unsigned int n)
 		else
 			for (j = 0; s2[j] != '\0'; j++)
 				cat[j + (s1_len - 1)] = s2[j];
+		cat[len] = '\0';
 	}
 	return (cat);
 }
