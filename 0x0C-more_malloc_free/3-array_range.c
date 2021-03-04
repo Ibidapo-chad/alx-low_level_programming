@@ -4,10 +4,11 @@
 
 /**
  * array_range - creates an array of integers
- * @min:
- * @max:
+ * @min: minimum number in range
+ * @max: maximum number in range
  *
- */ Return: pointer to an int
+ * Return:pointer to an int
+ */
 int *array_range(int min, int max)
 {
 	int i, bkx;
