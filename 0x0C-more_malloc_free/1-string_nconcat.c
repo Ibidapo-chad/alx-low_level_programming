@@ -35,11 +35,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (n < s2_len)
 		{
 			for (j = 0; j < n && s2[j] != '\0'; j++)
-				cat[j + (s1_len - 1)] = s2[j];
+				cat[j + (s1_len)] = s2[j];
 		}
 		else
 			for (j = 0; s2[j] != '\0'; j++)
-				cat[j + (s1_len - 1)] = s2[j];
+				cat[j + (s1_len)] = s2[j];
 		cat[len] = '\0';
 	}
 	return (cat);
