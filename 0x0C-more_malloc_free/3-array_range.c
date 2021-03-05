@@ -21,6 +21,5 @@ int *array_range(int min, int max)
 		return (NULL);
 	for (i = 0; i < bkx; i++)
 		range[i] = i + min;
-	range[bkx] = max;
 	return (range);
 }
