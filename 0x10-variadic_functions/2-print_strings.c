@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * print_strings - prints strings
  * @separator: delimiter
@@ -11,18 +11,27 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list arg;
-	unsigned int i, j;
-	char *fs = separator;
-	char ch;
+	unsigned int i;
+	char *s;
+	va_list args;
 
-	va_start(arg, n);
+	if (separator == NULL)
+		separator = "";
+
+	va_start(args, n);
+
 	for (i = 0; i < n; i++)
 	{
-		for (j = 0; fs[j] != '\0'; j++)
-			ch = printf("%s", fs[j]);
-		printf("%s%s", va_arg(arg, char), ch);
+		s = va_arg(args, char *);
+
+		if (s == NULL)
+			s = "(nil)";
+		printf("%s", s);
+		if (i < n - 1)
+		{
+			printf("%s", separator);
+		}
 	}
 	printf("\n");
-	va_end(arg);
+	va_end(args);
 }
