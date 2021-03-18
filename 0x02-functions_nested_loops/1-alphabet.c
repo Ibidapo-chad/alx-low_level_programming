@@ -1,7 +1,17 @@
 #include "holberton.h"
 
-int main()
+/**
+ * print_alphabet - prints lowercase alphabet letters in ascending order
+ *
+ * Return: no return value
+ */
+void print_alphabet(void)
 {
-  print_alphabet();
-  return (0);
+	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
+
+	i = 0;
+	while (i < 26)
+		_putchar(alphabet[i++]);
+	_putchar('\n');
 }

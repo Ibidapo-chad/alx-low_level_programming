@@ -1,9 +1,15 @@
 #include "holberton.h"
 
-int main(void)
+/**
+ * _islower - Checks whether the argument is a lowercase alphabet character
+ * @c: - argument of type int. Should be a character or a number.
+ *
+ * Return: 1 if c is lowercase or 0 if otherwise
+ */
+int _islower(int c)
 {
-  int r;
-  r = _islower('H');
-  _putchar(r);
-  return (0);
+	if ((c >= 97) && (c <= 122))
+		return (1);
+	else
+		return (0);
 }

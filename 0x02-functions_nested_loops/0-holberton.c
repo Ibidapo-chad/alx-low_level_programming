@@ -1,13 +1,22 @@
 #include "holberton.h"
 
-int main(){
-  /* Declare variable i and array name */
-  int i;
-  int name[10] = {'h','o','l','b','e','r','t','o','n'};
-  for (i = 0; name[i] <= 8; i++)
-  {
-    _putchar(name[i]);
-  }
-  _putchar('\n');
-  return (0);
+/**
+ * main - call _putchar to print "Holberton".
+ *
+ * Return: 0 (success)
+ */
+int main(void)
+{
+	char hol[9] = "Holberton";
+	int i;
+
+	i = 0;
+	while (i < 9)
+	{
+		_putchar(hol[i]);
+		i++;
+	}
+	_putchar('\n');
+
+	return (0);
 }

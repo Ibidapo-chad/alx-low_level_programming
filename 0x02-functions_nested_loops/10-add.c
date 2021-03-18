@@ -1,8 +1,13 @@
 #include "holberton.h"
-int main(void)
+
+/**
+ * add - returns the result of the sum of the two integers passed as arguments
+ * @x: - one of the integers that's part of the sum
+ * @y: - one of the integers that's part of the sum
+ *
+ * Return: Sum of adding x and y (x + y)
+ */
+int add(int x, int y)
 {
-  int n;
-  n = add(89, 9);
-  _putchar(n);
-  return (0);
+	return (x + y);
 }

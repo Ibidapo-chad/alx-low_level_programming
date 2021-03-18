@@ -1,10 +1,26 @@
 #include "holberton.h"
 
-int main(void)
+/**
+ * print_sign - prints the sogn of a number i.e. +ve or -ve
+ * @n: number whose sign is to be determined
+ *
+ * Return: 1 if +ve, 0 if 0 and -1 if -ve
+ */
+int print_sign(int n)
 {
-  int n, r;
-  n = 98;
-  r = print_sign(n);
-  _putchar(r + '0');
-  return (0);
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
