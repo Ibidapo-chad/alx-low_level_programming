@@ -1,2 +1,2 @@
 #!/bin/bash
-as main.o -o | less >> main.s
+gcc -S $CFILE
