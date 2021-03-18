@@ -1,27 +1,22 @@
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-  /*print hexadecimal from decimal */
-  /* Declare variables */
-  int chn, cha;
-  chn = 0;
-  cha = 'a';
-  while ((chn <= 9) || (cha <= 'f'))
-  {
-    putchar(chn);
-    chn++;
- 
-    if ((cha <= 'f') && (chn > 9))
-    {
-      while (cha <= 'f')
-      {
-	putchar(cha);
+	int a;
+	char c;
+
+	a = 0;
+	c = 'a';
+	while (a <= 9)
+		putchar(a++ + '0');
+	while (c <= 'f')
+		putchar(c++);
 	putchar('\n');
-	cha++;
-      }
-    }
-  }
-  return (0);
+
+	return (0);
 }

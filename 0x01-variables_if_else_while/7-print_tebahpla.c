@@ -1,16 +1,18 @@
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-  int ch;
-  /* print lowercase letters in reverse */
-  ch = 'z';
-  while (ch <= 'z')
-  {
-    putchar(ch);
-    putchar('\n');
-    ch--;
-  }
-  return (0);
+	char a;
+
+	a = 'z';
+	while (a >= 'a')
+		putchar(a--);
+	putchar('\n');
+
+	return (0);
 }

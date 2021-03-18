@@ -1,20 +1,24 @@
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-  int ch;
-  /* print lowercase letters*/
-  ch = 'a';
-  while (ch <= 'z')
-  {
-    if ((ch == 'e') || (ch == 'q'))
-    {
-      continue;
-    }
-    putchar(ch);
-    putchar('\n');
-    ch++;
-  }
-  return (0);
+	char a;
+
+	a = 'a';
+	while (a <= 'z')
+	{
+		if ((a != 'e') && (a != 'q'))
+		{
+			putchar(a);
+		}
+		a++;
+	}
+	putchar('\n');
+
+	return (0);
 }

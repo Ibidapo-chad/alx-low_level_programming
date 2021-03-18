@@ -1,17 +1,18 @@
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-  int ch;
-  /* print single digits of base 10*/
-  ch = 0;
-  while (ch < 10)
-  {
-    /* Declare putchar */
-    putchar(ch);
-    putchar('\n');
-    ch++;
-  }
-  return (0);
+	int i;
+
+	i = 0;
+	while (i < 10)
+		putchar(i++ + '0');
+	putchar('\n');
+
+	return (0);
 }
