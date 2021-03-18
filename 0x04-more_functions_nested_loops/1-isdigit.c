@@ -1,9 +1,19 @@
 #include "holberton.h"
-
-int main(void)
+/**
+ *_isdigit - checks for a digit.
+ *@c: input.
+ *
+ *Return: 1 if c is a digit
+ *0 otherwise.
+ */
+int _isdigit(int c)
 {
-  int c;
-  c = 40;
-  _putchar(_isdigit(c));
-  return (0);
+	if ((c >= '0') && (c <= '9'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

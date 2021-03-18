@@ -1,10 +1,28 @@
 #include "holberton.h"
-#include <stdio.h>
-
-int main(void)
+/**
+ *print_diagonal - prints a line n chars long.
+ *@n: number of \.
+ *
+ *Return: void.
+ */
+void print_diagonal(int n)
 {
-  print_diagonal(0);
-  print_diagonal(15);
-  print_diagonal(-20);
-  return (0);
+	int i, space;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (i = 0; i < n; i++)
+		{
+			for (space = 0; space < i; space++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
+		}
+	}
 }

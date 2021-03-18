@@ -1,8 +1,19 @@
 #include "holberton.h"
-int main(void)
+/**
+ *_isupper - checks if letters are uppercase.
+ *@c: input.
+ *
+ *Return: 1 if c is uppercase
+ *0 otherwise.
+ */
+int _isupper(int c)
 {
-  char c = 'A';
-  printf("%d", _isupper(c));
-  return (0);
+	if ((c >= 'A') && (c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
-

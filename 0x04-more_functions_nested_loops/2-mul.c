@@ -1,8 +1,15 @@
 #include "holberton.h"
-#include <stdio.h>
-
-int main(void)
+/**
+ *mul - multiplies two ints.
+ *@a: integer.
+ *@b: integer.
+ *
+ *Return: product.
+ */
+int mul(int a, int b)
 {
-  printf("%d\n", mul(10, 20));
-  return (0);
+	int product;
+
+	product = a * b;
+	return (product);
 }
