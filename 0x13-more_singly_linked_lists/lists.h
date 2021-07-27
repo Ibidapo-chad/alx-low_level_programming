@@ -10,7 +10,7 @@
  */
 typedef struct listint_s{
 	int value;
-	struct node *next;
+	struct listint_s *next;
 }listint_t;
 
 /* prototype functions */

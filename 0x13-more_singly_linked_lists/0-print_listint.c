@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint - prints all elements of a node list
@@ -9,8 +10,9 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t nd;
-	listint_t *tmp = h;
+	const listint_t *tmp = h;
 
+	nd = 0;
 	while(tmp != NULL)
 	{
 		if(tmp->next == NULL)
