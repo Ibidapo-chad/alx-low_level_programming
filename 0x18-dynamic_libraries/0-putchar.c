@@ -5,7 +5,7 @@
  * @c: character to be checked
  * Return: 1 if c is uppercase otherwise 0
  */
-int _putchar(int c)
+int _putchar(char c)
 {
 
 }

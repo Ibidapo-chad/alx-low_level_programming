@@ -7,7 +7,7 @@
  * @n: times
  * Return: 1 if c is uppercase otherwise 0
  */
-char *_memset(char *s, char *b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 
 }
